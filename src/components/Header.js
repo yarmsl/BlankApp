@@ -28,8 +28,9 @@ const Header = () => {
 				<Typography className={classes.logo}>React MaterialUI App</Typography>
 				<ButtonGroup variant='contained' color='secondary'>
 					<Button component={ Link } to='/' startIcon={<AppsRoundedIcon/>}>Главная</Button>
-					<Button component={ Link } to='/page1' endIcon={<PagesRoundedIcon/>}>Page1</Button>
-					<Button component={ Link } to='/page2' endIcon={<PagesRoundedIcon/>}>Page2</Button>
+					<Button component={ Link } to='/page1' endIcon={<PagesRoundedIcon/>}>useState</Button>
+					<Button component={ Link } to='/page2' endIcon={<PagesRoundedIcon/>}>useEffect</Button>
+					<Button component={ Link } to='/page3' endIcon={<PagesRoundedIcon/>}>useRef</Button>
 				</ButtonGroup>
 			</Container>
 		</AppBar>

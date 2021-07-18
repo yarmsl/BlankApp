@@ -11,7 +11,10 @@ const useStyles = makeStyles(() => ({
 		flexDirection: 'column',
 	},
 	main: {
-		flexGrow: 1
+		flexGrow: 1,
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center'
 	}
 }));
 

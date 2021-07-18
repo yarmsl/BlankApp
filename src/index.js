@@ -4,10 +4,11 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import theme from './UI/theme';
 import Home from './pages/Home';
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
 import NotFound from './pages/NotFound';
 import MainLayout from './layouts/MainLayout';
+import Page1 from './pages/Page1';
+import Page2 from './pages/Page2';
+import Page3 from './pages/Page3';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
 						<Route exact path='/' component={Home} />
 						<Route exact path='/page1' component={Page1} />
 						<Route exact path='/page2' component={Page2} />
+						<Route exact path='/page3' component={Page3} />
 						<Route component={NotFound} />
 					</Switch>
 				</MainLayout>
