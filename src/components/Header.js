@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AppBar, Box, Button, ButtonGroup, Container, makeStyles, Typography } from '@material-ui/core';
 import AppsRoundedIcon from '@material-ui/icons/AppsRounded';
 import PagesRoundedIcon from '@material-ui/icons/PagesRounded';
+// import {useMedia} from '../hooks/useMedia';
 
 const useStyles = makeStyles(() => ({
 	header: {
@@ -21,15 +22,17 @@ const useStyles = makeStyles(() => ({
 		flexGrow: 1
 	},
 	btns: {
+		width: '100%',
 		display: 'flex',
-		justifyContent: 'flex-end'
-	}
+		justifyContent: 'flex-end',
+		
+	},
 }));
 
 const Header = () => {
 
 	const classes = useStyles();
-
+	// const {matchesHD} = useMedia();
 	return (
 		<AppBar className={classes.header} position='sticky'>
 			<Container className={classes.root}>
@@ -38,7 +41,7 @@ const Header = () => {
 					<Button component={ Link } to='/' variant='outlined' color='inherit' startIcon={<AppsRoundedIcon/>}>Главная</Button>
 				</Box>
 				<Box className={classes.btns}>
-					<ButtonGroup variant='contained' color='secondary' >
+					<ButtonGroup variant='contained' color='secondary' size='small' >
 						<Button component={ Link } to='/page1' endIcon={<PagesRoundedIcon/>}>useState</Button>
 						<Button component={ Link } to='/page2' endIcon={<PagesRoundedIcon/>}>useEffect</Button>
 						<Button component={ Link } to='/page3' endIcon={<PagesRoundedIcon/>}>useRef</Button>
